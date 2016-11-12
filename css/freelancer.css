@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #18BC9C;
+  color: #7fd8b9;
   outline: none;
 }
 h1,
@@ -38,11 +38,11 @@ hr.star-primary {
   border-top: solid 5px;
   text-align: center;
   max-width: 250px;
-  margin: 25px auto 30px;
+  margin: 25px auto 60px;
 }
 hr.star-light:after,
 hr.star-primary:after {
-  content: "\f005";
+  content: "\f0e5";
   font-family: FontAwesome;
   display: inline-block;
   position: relative;
@@ -54,22 +54,28 @@ hr.star-light {
   border-color: white;
 }
 hr.star-light:after {
-  background-color: #18BC9C;
   color: white;
 }
+header hr.star-light:after,
+.success hr.star-light:after {
+  background-color: #7fd8b9;
+}
+.dark hr.star-light:after {
+  background-color: #2a1c49;
+}
 hr.star-primary {
-  border-color: #2C3E50;
+  border-color: #2a1c49;
 }
 hr.star-primary:after {
   background-color: white;
-  color: #2C3E50;
+  color: #2a1c49;
 }
 .img-centered {
   margin: 0 auto;
 }
 header {
   text-align: center;
-  background: #18BC9C;
+  background: #7fd8b9;
   color: white;
 }
 header .container {
@@ -104,7 +110,7 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #2C3E50;
+  background: #2a1c49;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -129,7 +135,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #18BC9C;
+  color: #7fd8b9;
   outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
@@ -138,13 +144,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #18BC9C;
+  background: #7fd8b9;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #18BC9C;
+  background: #7fd8b9;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -154,9 +160,9 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #18BC9C;
+  background-color: #7fd8b9;
   color: white;
-  border-color: #18BC9C;
+  border-color: #7fd8b9;
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -186,7 +192,11 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #18BC9C;
+  background: #7fd8b9;
+  color: white;
+}
+section.dark {
+  background: #2a1c49;
   color: white;
 }
 @media (max-width: 767px) {
@@ -208,7 +218,7 @@ section.success {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: rgba(24, 188, 156, 0.9);
+  background: rgba(127, 216, 185, 0.9);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -289,7 +299,7 @@ section.success {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #18BC9C;
+  color: #7fd8b9;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -302,14 +312,14 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: #2C3E50;
+  background-color: #2a1c49;
 }
 footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #233140;
+  background-color: #1f1537;
 }
 .btn-outline {
   color: white;
@@ -323,14 +333,25 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: #18BC9C;
+  color: #7fd8b9;
   background: white;
   border: solid 2px white;
 }
+.btn-dark {
+  color: #2a1c49;
+  border-color: #2a1c49;
+}
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark.active {
+  color: #7fd8b9;
+  border-color: #7fd8b9;
+}
 .btn-primary {
   color: white;
-  background-color: #2C3E50;
-  border-color: #2C3E50;
+  background-color: #2a1c49;
+  border-color: #2a1c49;
   font-weight: 700;
 }
 .btn-primary:hover,
@@ -339,8 +360,8 @@ footer .footer-below {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #1a242f;
-  border-color: #161f29;
+  background-color: #150e24;
+  border-color: #110b1d;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -362,17 +383,17 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #2C3E50;
-  border-color: #2C3E50;
+  background-color: #2a1c49;
+  border-color: #2a1c49;
 }
 .btn-primary .badge {
-  color: #2C3E50;
+  color: #2a1c49;
   background-color: white;
 }
 .btn-success {
   color: white;
-  background-color: #18BC9C;
-  border-color: #18BC9C;
+  background-color: #7fd8b9;
+  border-color: #7fd8b9;
   font-weight: 700;
 }
 .btn-success:hover,
@@ -381,8 +402,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: white;
-  background-color: #128f76;
-  border-color: #11866f;
+  background-color: #58cca4;
+  border-color: #50ca9f;
 }
 .btn-success:active,
 .btn-success.active,
@@ -404,22 +425,23 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #18BC9C;
-  border-color: #18BC9C;
+  background-color: #7fd8b9;
+  border-color: #7fd8b9;
 }
 .btn-success .badge {
-  color: #18BC9C;
+  color: #7fd8b9;
   background-color: white;
 }
 .btn-social {
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   border: 2px solid white;
   border-radius: 100%;
   text-align: center;
-  font-size: 20px;
-  line-height: 45px;
+  font-size: 40px;
+  line-height: 90px;
+  margin: 2rem;
 }
 .btn:focus,
 .btn:active,
@@ -480,7 +502,7 @@ fieldset[disabled] .btn-success.active {
   height: 75px;
   width: 1px;
   margin-left: 35px;
-  background-color: #2C3E50;
+  background-color: #2a1c49;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -491,7 +513,7 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
-  background-color: #2C3E50;
+  background-color: #2a1c49;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
@@ -502,4 +524,10 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+.margin-top {
+  margin-top: 4rem;
+}
+.p-big {
+  font-size: 2.5rem;
 }
