@@ -92,6 +92,11 @@ header .intro-text .name {
 header .intro-text .name img {
   height: 140px;
 }
+@media (max-width: 767px) {
+  header .intro-text .name img {
+    height: 90px;
+  }
+}
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
