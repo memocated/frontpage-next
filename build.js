@@ -1,5 +1,4 @@
 const Metalsmith = require('metalsmith')
-const markdown = require('metalsmith-markdown')
 const layouts = require('metalsmith-layouts')
 const assets = require('metalsmith-assets')
 const rootpath = require('metalsmith-rootpath')
@@ -9,7 +8,7 @@ const sass = require('metalsmith-sass')
 
 Metalsmith(__dirname)
   .source('./src')
-  .destination('./_site')
+  .destination('./docs')
   .clean(true)
   .use(rootpath())
   .use(layouts({
