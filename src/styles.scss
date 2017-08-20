@@ -1,0 +1,112 @@
+$background-color: #FCFCFC;
+$nav-height: 80px;
+$footer-height: 80px;
+$grid-container-padding: 0;
+$memocate-color: #ffb135;
+
+$grid-columns: 21;
+$topbar-padding: 0;
+$topbar-background: $background-color;
+$body-background: $background-color;
+
+@import 'foundation';
+@include foundation-xy-grid-classes($padding-grid: false);
+@include foundation-global-styles;
+@include foundation-top-bar;
+@include foundation-menu;
+
+@mixin full-height {
+  height: calc(100vh - #{ $nav-height });
+}
+
+.logo {
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Lato;
+  font-weight: 400;
+}
+
+.intro {
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 62px;
+  strong {
+    font-weight: 700;
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 10;
+  @include full-height;
+}
+
+.home_m {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.our-story {
+  @include full-height;
+}
+
+.home_social {
+  position: absolute;
+  bottom: 7vh;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  color: rgba(100, 100, 100, 0.8);
+  & a {
+    color:  #646464;
+    margin-left: 15px;
+    margin-right: 15px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.language-selection {
+  text-align: right;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: $nav-height;
+}
+
+.page-content {
+  margin-top: $nav-height;
+}
+
+.top-bar {
+  z-index: 9001;
+  &-link {
+    text-decoration: none;
+    color: #646464;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  &-button {
+    color: $memocate-color;
+    border: solid 1px;
+    border-radius: 49px;
+  }
+  &-right {
+    margin-right: 3.5%;
+  }
+}

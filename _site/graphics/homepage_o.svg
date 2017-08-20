@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 482.25 440.09">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #e6f7f1;
+      }
+
+      .cls-4 {
+        fill: #fcfcfc;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path class="cls-1" d="M917.63-1093.27a377.6,377.6,0,0,0-269.38,112.6,377.6,377.6,0,0,0-269.38-112.6C169.63-1093.27,0-923.65,0-714.4v498.14H219V-714.4A159.89,159.89,0,0,1,378.87-874.29,159.89,159.89,0,0,1,538.76-714.4v498.14h219V-714.4A159.89,159.89,0,0,1,917.63-874.29"/>
+    </clipPath>
+  </defs>
+  <title>memocate_homepage_v2</title>
+  <g id="landing">
+    <g class="cls-2">
+      <image width="3456" height="4608" transform="translate(-5.61 -1418) scale(0.36)" xlink:href="../../bgs/homepage_front.png"/>
+    </g>
+  </g>
+  <g id="about_us1" data-name="about us1">
+    <path class="cls-3" d="M275.18,25.94C160.82,25.94,68.11,118.65,68.11,233s92.71,207.07,207.07,207.07S482.25,347.38,482.25,233,389.54,25.94,275.18,25.94Zm0,334.73A127.66,127.66,0,1,1,402.84,233,127.66,127.66,0,0,1,275.18,360.67Z"/>
+    <image width="1381" height="1968" transform="translate(-27) scale(0.24)" xlink:href="../../../../../Desktop/globe.png"/>
+    <circle class="cls-4" cx="276.27" cy="232.97" r="127.66"/>
+  </g>
+</svg>

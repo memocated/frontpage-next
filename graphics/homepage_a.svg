@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 469.09 477.99">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        fill: #ebeaf2;
+      }
+    </style>
+  </defs>
+  <title>memocate_homepage_v2</title>
+  <g id="about_us3" data-name="about us3">
+    <g class="cls-1">
+      <path class="cls-2" d="M261.71,61C142.28,61,46.42,161.89,54.78,283.11c7.18,104.07,92.77,187.62,197,192.5a206.73,206.73,0,0,0,137.85-43.87s0,1.66,0,4.33a39.77,39.77,0,0,0,39.74,39.77h0a39.74,39.74,0,0,0,39.74-39.74V265.58C467.58,152.32,375.34,61,261.71,61Zm13,334.69A127.94,127.94,0,0,1,134.47,255.35c5.93-59.85,54.34-108.27,114.19-114.2A128,128,0,0,1,389,281.45C383,341.3,334.62,389.71,274.76,395.64Z"/>
+    </g>
+    <image width="2000" height="2000" transform="translate(-105.63 -8.73) scale(0.25)" xlink:href="../../../../../Desktop/plant.png"/>
+  </g>
+</svg>
