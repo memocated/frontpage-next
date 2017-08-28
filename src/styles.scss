@@ -3,6 +3,8 @@ $nav-height: 80px;
 $footer-height: 80px;
 $grid-container-padding: 0;
 $memocate-color: #ffb135;
+$gray: #c4c4c4;
+$light-gray: #f0f0f0;
 
 $grid-columns: 21;
 $topbar-padding: 0;
@@ -46,6 +48,38 @@ body {
   @include full-height;
 }
 
+h1 {
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.ball {
+  $r: 15px;
+  border: solid 1px $gray;
+  border-radius: $r;
+  width: $r;
+  height: $r;
+  display: inline-block;
+  &-active {
+    background-color: $gray;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    align-items: right;
+  }
+  &-nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .home_m {
   position: absolute;
   bottom: 0;
@@ -54,7 +88,39 @@ body {
 }
 
 .our-story {
-  @include full-height;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: $gray;
+  margin-bottom: 15px;
+  &-paragraphs {
+    margin-top: 65px;
+    display: flex;
+
+    & p:last-child {
+      padding-left: 20px;
+    }
+    & p:first-child {
+      border-right: solid 1px $light-gray;
+      padding-right: 20px;
+    }
+  }
+  &-headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  &-line {
+    border-bottom: solid 2px $gray;
+    width: 80px;
+    display: block;
+  }
+
+  &-page {
+    padding-top: 80px;
+    @include full-height;
+  }
+  &-container {
+  }
 }
 
 .home_social {

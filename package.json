@@ -25,7 +25,9 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
   },
   "dependencies": {
+    "chokidar-cli": "^1.2.0",
     "foundation-sites": "^6.4.3",
+    "glob-watcher": "^4.0.0",
     "handlebars": "^4.0.10",
     "jstransformer-handlebars": "^1.0.0",
     "metalsmith": "^2.3.0",
@@ -33,7 +35,9 @@
     "metalsmith-debug": "^1.1.0",
     "metalsmith-in-place": "^3.0.1",
     "metalsmith-layouts": "^1.8.1",
+    "metalsmith-livereload": "^0.1.0",
     "metalsmith-rootpath": "^1.0.4",
-    "metalsmith-sass": "^1.4.0"
+    "metalsmith-sass": "^1.4.0",
+    "node-static": "^0.7.9"
   }
 }
