@@ -152,9 +152,10 @@ h1 {
   &-row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &-container {
-    width: 20vw;
+    width: 22vw;
     height: 28vw;
     position: relative;
     perspective: 800px;

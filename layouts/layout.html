@@ -124,6 +124,14 @@
                 </div>
               </div>
               {{/each}}
+              {{!-- Round off last row --}}
+              {{#eq (modulo (length team) 3) 2}}
+              <div class="contacts-card-container"></div>
+              {{/eq}}
+              {{#eq (modulo (length team) 3) 1}}
+              <div class="contacts-card-container"></div>
+              <div class="contacts-card-container"></div>
+              {{/eq}}
             </div>
           </div>
         </div>
