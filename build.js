@@ -6,16 +6,19 @@ const debug = require('metalsmith-debug')
 const inPlace = require('metalsmith-in-place')
 const sass = require('metalsmith-sass')
 const liveReload = require('metalsmith-livereload')
+const helpers = require('metalsmith-register-helpers')
+
 const nodeStatic = require('node-static');
 const watch = require('glob-watcher');
 
-const build =  () => {
+const build = (done) => {
   console.log('building')
   Metalsmith(__dirname)
     .source('./src')
     .destination('./docs')
     .clean(true)
     .use(rootpath())
+    .use(helpers())
     .use(layouts({
       engine: 'handlebars'
     }))
@@ -39,7 +42,9 @@ const build =  () => {
     }))
     .use(liveReload({ debug: true }))
     .build(function(err, files) {
-      if (err) { throw err; }
+      console.log('build done')
+      done(err);
+      // if (err) { throw err; }
     });
 }
 
@@ -55,5 +60,7 @@ require('http').createServer((req, res) => {
 /**
  * Watch files.
  */
-build();
-watch(__dirname + '/layouts/*', { ignoreInitial: false }, build());
+watch([
+  __dirname + '/layouts/*',
+  __dirname + '/src/**/*'
+], { ignoreInitial: false }, build);
