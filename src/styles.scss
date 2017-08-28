@@ -139,9 +139,13 @@ h1 {
   &-detail {
     background: $background-color;
   }
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
   &-container {
-    width: 100%;
-    height: 200px;
+    width: 20vw;
+    height: 28vw;
     position: relative;
     perspective: 800px;
   }
@@ -210,4 +214,8 @@ nav {
   &-right {
     margin-right: 3.5%;
   }
+}
+
+.light-text {
+  font-weight: 400;
 }

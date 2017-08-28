@@ -189,14 +189,46 @@
 
         <div class="grid-x">
           <div class="large-offset-2 large-17">
-            <div class="grid-x">
-              <div class="large-3 contacts-card-container">
+            <div class="contacts-card-row">
+              <div class="contacts-card-container">
                 <div class="contacts-card">
                   <figure class="contacts-card-pic">
-                    foo
+                    <h4>Heikki</h4>
+                    <img src="img/heikki.jpg"/>
                   </figure>
                   <figure class="contacts-card-detail">
-                    bar
+                    <h4>Heikki <span class="light-text">Viitanen</span></h4>
+                    <p>CO-FOUNDER &amp; CEO</p>
+                    <p>heikki@memocate.com</p>
+                    <p>358440998996</p>
+                  </figure>
+                </div>
+              </div>
+              <div class="contacts-card-container">
+                <div class="contacts-card">
+                  <figure class="contacts-card-pic">
+                    <h4>Camilla</h4>
+                    <img src="img/camilla.jpg"/>
+                  </figure>
+                  <figure class="contacts-card-detail">
+                    <h4>Camilla <span class="light-text">Lindholm</span></h4>
+                    <p>CO-FOUNDER &amp; SCIENTIFIC ADVISOR</p>
+                    <p>camilla@memocate.com</p>
+                    <p>040 555 66 77</p>
+                  </figure>
+                </div>
+              </div>
+              <div class="contacts-card-container">
+                <div class="contacts-card">
+                  <figure class="contacts-card-pic">
+                    <h4>Anastasiia</h4>
+                    <img src="img/camilla.jpg"/>
+                  </figure>
+                  <figure class="contacts-card-detail">
+                    <h4>Anastasiia <span class="light-text">Kozina</span></h4>
+                    <p>CO-FOUNDER &amp; STUFF</p>
+                    <p>anastasiia@memocate.com</p>
+                    <p>XXX XXX XXX</p>
                   </figure>
                 </div>
               </div>
@@ -210,11 +242,15 @@
     <script type="text/javascript">
       var contactCards = document.querySelectorAll('.contacts-card')
       ;[].forEach.call(contactCards, function(el) {
+        var timeoutId = null
         el.addEventListener('mouseover', function () {
           el.className += ' contacts-card-flipped'
+          clearTimeout(timeoutId)
         })
         el.addEventListener('mouseleave', function () {
-          el.className = el.className.replace(/ contacts-card-flipped/g, '')
+          timeoutId = setTimeout(function () {
+            el.className = el.className.replace(/ contacts-card-flipped/g, '')
+          }, 500)
         })
       })
     </script>

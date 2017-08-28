@@ -107,15 +107,19 @@
 
         <div class="grid-x">
           <div class="large-offset-2 large-17">
-            <div class="grid-x">
+            <div class="contacts-card-row">
               {{#each team}}
-              <div class="large-3 contacts-card-container">
+              <div class="contacts-card-container">
                 <div class="contacts-card">
                   <figure class="contacts-card-pic">
-                    foo
+                    <h4>{{this.first_name}}</h4>
+                    <img src="{{rootPath}}img/{{this.picture}}"/>
                   </figure>
                   <figure class="contacts-card-detail">
-                    bar
+                    <h4>{{this.first_name}} <span class="light-text">{{this.last_name}}</span></h4>
+                    <p>{{this.title}}</p>
+                    <p>{{this.email}}</p>
+                    <p>{{this.phone}}</p>
                   </figure>
                 </div>
               </div>
@@ -130,11 +134,15 @@
     <script type="text/javascript">
       var contactCards = document.querySelectorAll('.contacts-card')
       ;[].forEach.call(contactCards, function(el) {
+        var timeoutId = null
         el.addEventListener('mouseover', function () {
           el.className += ' contacts-card-flipped'
+          clearTimeout(timeoutId)
         })
         el.addEventListener('mouseleave', function () {
-          el.className = el.className.replace(/ contacts-card-flipped/g, '')
+          timeoutId = setTimeout(function () {
+            el.className = el.className.replace(/ contacts-card-flipped/g, '')
+          }, 500)
         })
       })
     </script>
