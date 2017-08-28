@@ -85,6 +85,7 @@ h1 {
   bottom: 0;
   right: 0;
   z-index: 0;
+  width: 100%;
 }
 
 .our-story {
@@ -107,7 +108,7 @@ h1 {
   &-headers {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
   }
   &-line {
     border-bottom: solid 2px $gray;
