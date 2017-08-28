@@ -126,6 +126,7 @@ h1 {
 
 .page {
   padding-top: 80px;
+  position: relative;
   @include full-height;
 }
 
