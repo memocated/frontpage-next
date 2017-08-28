@@ -66,7 +66,7 @@
 
       </div>
 
-      <div class="grid-container fluid our-story-page">
+      <div class="grid-container fluid page">
         <div class="grid-x">
           <div class="large-offset-2 large-17 our-story-container">
             <div class="grid-x">
@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="grid-container fluid our-story-page">
+      <div class="grid-container fluid page">
         <div class="grid-x">
           <div class="large-offset-2 large-17 our-story-container">
             <div class="grid-x">
@@ -122,7 +122,7 @@
           </div>
         </div>
       </div>
-      <div class="grid-container fluid our-story-page">
+      <div class="grid-container fluid page">
         <div class="grid-x">
           <div class="large-offset-2 large-17 our-story-container">
             <div class="grid-x">
@@ -150,7 +150,7 @@
           </div>
         </div>
       </div>
-      <div class="grid-container fluid our-story-page">
+      <div class="grid-container fluid page">
         <div class="grid-x">
           <div class="large-offset-2 large-17 our-story-container">
             <div class="grid-x">
@@ -178,7 +178,46 @@
           </div>
         </div>
       </div>
+
+      <div class="grid-container fluid page">
+        <div class="grid-x">
+          <div class="large-offset-2 large-17">
+            <span class="our-story-line"></span>
+            <span class="our-story">Our Team</span>
+          </div>
+        </div>
+
+        <div class="grid-x">
+          <div class="large-offset-2 large-17">
+            <div class="grid-x">
+              <div class="large-3 contacts-card-container">
+                <div class="contacts-card">
+                  <figure class="contacts-card-pic">
+                    foo
+                  </figure>
+                  <figure class="contacts-card-detail">
+                    bar
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div> <!-- page content -->
+
+    <script type="text/javascript">
+      var contactCards = document.querySelectorAll('.contacts-card')
+      ;[].forEach.call(contactCards, function(el) {
+        el.addEventListener('mouseover', function () {
+          el.className += ' contacts-card-flipped'
+        })
+        el.addEventListener('mouseleave', function () {
+          el.className = el.className.replace(/ contacts-card-flipped/g, '')
+        })
+      })
+    </script>
 
     <!-- Piwik -->
     <script type="text/javascript">

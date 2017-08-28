@@ -116,11 +116,45 @@ h1 {
     display: block;
   }
 
-  &-page {
-    padding-top: 80px;
-    @include full-height;
+  &-container {
+  }
+}
+
+.page {
+  padding-top: 80px;
+  @include full-height;
+}
+
+.contacts-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: right center;
+  &-flipped {
+    transform: translateX( -100% ) rotateY( -180deg );
+  }
+  &-pic,
+  &-detail {
+    background: $background-color;
   }
   &-container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    perspective: 800px;
+  }
+  & figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  &-detail {
+    transform: rotateY( 180deg );
   }
 }
 
