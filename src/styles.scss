@@ -25,12 +25,14 @@ $body-background: $background-color;
 @include foundation-menu;
 @include foundation-visibility-classes;
 
-@mixin full-height {
-  height: calc(100vh - #{ $nav-height });
-}
-
 @mixin min-full-height {
   min-height: calc(100vh - #{ $nav-height });
+}
+
+@mixin small-padding {
+  @include breakpoint(small down) {
+    padding: 12px;
+  }
 }
 
 .logo {
@@ -45,6 +47,7 @@ body {
   font-family: Lato;
   font-weight: 400;
   scroll-behavior: smooth;
+  @include small-padding;
 }
 
 .intro {
@@ -310,6 +313,7 @@ nav {
 }
 
 .top-bar {
+  @include small-padding;
   z-index: 9001;
   &-link {
     text-decoration: none;
@@ -324,7 +328,18 @@ nav {
   }
   &-right {
     margin-right: 3.5%;
+    @include breakpoint(small down) {
+      margin-top: 10px;
+    }
   }
+}
+
+.mobile-toggle {
+  float: right;
+  width: 40px;
+  height: 40px;
+  display: block;
+  fill: $memocate-color;
 }
 
 .light-text {
