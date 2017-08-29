@@ -20,7 +20,8 @@ const build = (done) => {
     .use(rootpath())
     .use(helpers())
     .use(layouts({
-      engine: 'handlebars'
+      engine: 'handlebars',
+      partials: 'partials'
     }))
     .use(sass({
       outputDir: 'css/',
@@ -44,7 +45,6 @@ const build = (done) => {
     .build(function(err, files) {
       console.log('build done')
       done(err);
-      // if (err) { throw err; }
     });
 }
 
@@ -62,5 +62,6 @@ require('http').createServer((req, res) => {
  */
 watch([
   __dirname + '/layouts/*',
-  __dirname + '/src/**/*'
+  __dirname + '/src/**/*',
+  __dirname + '/partials/*'
 ], { ignoreInitial: false }, build);
