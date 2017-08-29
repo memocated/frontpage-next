@@ -196,7 +196,7 @@
       ;[].forEach.call(topBarLinks, function(el) {
         el.addEventListener('click', function (ev) {
           var target = document.querySelector(this.hash)
-          window.scroll({
+          window.scrollBy({
             top: target.getBoundingClientRect().top,
             behavior: 'smooth'
           })
