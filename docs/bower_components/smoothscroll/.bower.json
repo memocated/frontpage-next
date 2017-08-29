@@ -1,0 +1,38 @@
+{
+  "name": "smoothscroll",
+  "description": "Polyfill for smooth scroll behavior",
+  "main": "dist/smoothscroll.js",
+  "authors": [
+    "Dustan Kasten",
+    "Jeremias Menichelli"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "smooth",
+    "scroll",
+    "CSSOM",
+    "polyfill"
+  ],
+  "homepage": "https://iamdustan.github.io/smoothscroll",
+  "ignore": [
+    "**/.*",
+    "src",
+    "node_modules",
+    "bower_components",
+    "index.html",
+    "gulpfile.js",
+    "test",
+    "tests"
+  ],
+  "version": "0.3.6",
+  "_release": "0.3.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.6",
+    "commit": "584d76786442869c66ab4bad39e027ed1097b05d"
+  },
+  "_source": "https://github.com/iamdustan/smoothscroll.git",
+  "_target": "^0.3.6",
+  "_originalSource": "smoothscroll",
+  "_direct": true
+}

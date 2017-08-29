@@ -41,6 +41,10 @@ const build = (done) => {
       source: './graphics',
       destination: './graphics'
     }))
+    .use(assets({
+      source: './bower_components',
+      destination: './bower_components'
+    }))
     .use(liveReload({ debug: true }))
     .build(function(err, files) {
       console.log('build done')
