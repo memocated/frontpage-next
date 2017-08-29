@@ -278,6 +278,7 @@ h1 {
 }
 
 .home_social {
+  @include small-padding;
   position: absolute;
   bottom: 1vh;
   @include breakpoint(medium) {
