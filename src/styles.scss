@@ -6,6 +6,9 @@ $memocate-color: #ffb135;
 $gray: #c4c4c4;
 $light-gray: #f0f0f0;
 
+$contact-width-large: 22vw; // ~33% of content area
+$contact-gutter: 3.74vw; // ~ (17 columns / 21 columns ) - (0.22 * 3 contacts) / (2 paddings * 2 sides)
+
 $grid-columns: 21;
 $topbar-padding: 0;
 $topbar-background: $background-color;
@@ -175,7 +178,7 @@ h1 {
     flex-wrap: wrap;
   }
   &-container {
-    width: 22vw;
+    width: $contact-width-large;
     height: 29vw;
     position: relative;
     perspective: 800px;
@@ -199,10 +202,11 @@ h1 {
 }
 
 .in-touch {
-  width: 33.3%;
+  width: $contact-width-large;
+  box-sizing: content-box;
   border-right: solid 1px $light-gray;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: $contact-gutter;
+  padding-right: $contact-gutter;
   &:last-child {
     border-right: none;
     padding-right: 0;
@@ -213,6 +217,10 @@ h1 {
   &-row {
     display: flex;
     justify-content: space-between;
+  }
+  &-input,
+  &-button {
+    box-sizing: border-box;
   }
   &-input {
     width: 100%;
