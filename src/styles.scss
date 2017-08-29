@@ -7,9 +7,11 @@ $gray: #c4c4c4;
 $light-gray: #f0f0f0;
 
 $contact-width-large: 22vw; // ~33% of content area
+$contact-height-large: 29vw;
 $contact-gutter: 3.74vw; // ~ (17 columns / 21 columns ) - (0.22 * 3 contacts) / (2 paddings * 2 sides)
 
 $contact-width-small: 88vw;
+$contact-height-small: 101vw;
 
 $grid-columns: 21;
 $topbar-padding: 0;
@@ -186,7 +188,7 @@ h1 {
     background: $background-color;
   }
   &-row {
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -195,10 +197,10 @@ h1 {
   }
   &-container {
     width: $contact-width-small;
-    height: 101vw;
-    @include breakpoint(large) {
+    height: $contact-height-small;
+    @include breakpoint(medium) {
       width: $contact-width-large;
-      height: 29vw;
+      height: $contact-height-large;
     }
     position: relative;
     perspective: 800px;
@@ -223,7 +225,7 @@ h1 {
 
 .in-touch {
   width: $contact-width-small;
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     width: $contact-width-large;
     border-right: solid 1px $light-gray;
   }
@@ -234,14 +236,14 @@ h1 {
     border-right: none;
     padding-right: 0;
   }
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     &:first-child {
       padding-left: 0;
     }
   }
 
   &-row {
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       display: flex;
       justify-content: space-between;
     }
