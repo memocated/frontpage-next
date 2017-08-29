@@ -145,6 +145,17 @@ h1 {
   &-flipped {
     transform: translateX( -100% ) rotateY( -180deg );
   }
+  &-header {
+    margin-bottom: 8px;
+    font-size: 30px;
+  }
+  &-title {
+    color: $gray;
+    text-transform: uppercase;
+    margin-top: 0;
+    line-height: 1;
+    flex-grow: 1;
+  }
   &-icon {
     width: 40px;
     height: 40px;
@@ -165,7 +176,7 @@ h1 {
   }
   &-container {
     width: 22vw;
-    height: 28vw;
+    height: 29vw;
     position: relative;
     perspective: 800px;
   }
@@ -179,6 +190,11 @@ h1 {
   }
   &-detail {
     transform: rotateY( 180deg );
+    &-contents {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
   }
 }
 
