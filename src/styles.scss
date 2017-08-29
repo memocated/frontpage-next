@@ -145,6 +145,15 @@ h1 {
   &-flipped {
     transform: translateX( -100% ) rotateY( -180deg );
   }
+  &-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    &-line span,
+    &-line img {
+      vertical-align: middle;
+    }
+  }
   &-pic,
   &-detail {
     background: $background-color;

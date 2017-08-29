@@ -118,8 +118,14 @@
                   <figure class="contacts-card-detail">
                     <h4>{{this.first_name}} <span class="light-text">{{this.last_name}}</span></h4>
                     <p>{{this.title}}</p>
-                    <p>{{this.email}}</p>
-                    <p>{{this.phone}}</p>
+                    <p class="contact-card-icon-line">
+                      <img class="contacts-card-icon" src="{{rootPath}}graphics/homepage_icon_email.svg"/>
+                      <span> {{this.email}}</span>
+                    </p>
+                    <p class="contact-card-icon-line">
+                      <img class="contacts-card-icon" src="{{rootPath}}graphics/homepage_icon_phone.svg"/>
+                      <span> {{this.phone}}</span>
+                    </p>
                   </figure>
                 </div>
               </div>
