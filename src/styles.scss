@@ -29,9 +29,10 @@ $body-background: $background-color;
   min-height: calc(100vh - #{ $nav-height });
 }
 
+$small-padding: 12px;
 @mixin small-padding {
   @include breakpoint(small down) {
-    padding: 12px;
+    padding: $small-padding;
   }
 }
 
@@ -278,7 +279,10 @@ h1 {
 
 .home_social {
   position: absolute;
-  bottom: 7vh;
+  bottom: 0;
+  @include breakpoint(medium) {
+    bottom: 7vh;
+  }
   left: 0;
   z-index: 11;
   width: 100%;
@@ -305,7 +309,9 @@ nav {
   top: 0;
   left: 0;
   width: 100vw;
-  height: $nav-height;
+  @include breakpoint(medium) {
+    height: $nav-height;
+  }
 }
 
 .page-content {
@@ -313,7 +319,18 @@ nav {
 }
 
 .top-bar {
-  @include small-padding;
+  &-left {
+    @include small-padding;
+    background-color: $background-color;
+  }
+  &-right {
+    padding-left: $small-padding;
+    padding-right: $small-padding;
+    padding-bottom: $small-padding;
+    &.show-for-medium {
+      /* padding: 0; */
+    }
+  }
   z-index: 9001;
   &-link {
     text-decoration: none;
@@ -328,9 +345,6 @@ nav {
   }
   &-right {
     margin-right: 3.5%;
-    @include breakpoint(small down) {
-      margin-top: 10px;
-    }
   }
 }
 
