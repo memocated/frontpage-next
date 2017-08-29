@@ -336,6 +336,7 @@
             top: target.getBoundingClientRect().top,
             behavior: 'smooth'
           })
+          document.location.hash = this.hash
           target.focus()
           ev.preventDefault()
           return false
