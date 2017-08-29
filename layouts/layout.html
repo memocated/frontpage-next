@@ -192,7 +192,7 @@
     <script type="text/javascript" src="{{rootPath}}bower_components/smoothscroll/dist/smoothscroll.js"></script>
     <script type="text/javascript">
       // get rid of this junk once http://caniuse.com/#feat=css-scroll-behavior
-      var topBarLinks = document.querySelectorAll('.top-bar-link')
+      var topBarLinks = document.querySelectorAll('.top-bar-link, .ball')
       ;[].forEach.call(topBarLinks, function(el) {
         el.addEventListener('click', function (ev) {
           var target = document.querySelector(this.hash)
