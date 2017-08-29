@@ -9,6 +9,8 @@ $light-gray: #f0f0f0;
 $contact-width-large: 22vw; // ~33% of content area
 $contact-gutter: 3.74vw; // ~ (17 columns / 21 columns ) - (0.22 * 3 contacts) / (2 paddings * 2 sides)
 
+$contact-width-small: 88vw;
+
 $grid-columns: 21;
 $topbar-padding: 0;
 $topbar-background: $background-color;
@@ -19,6 +21,7 @@ $body-background: $background-color;
 @include foundation-global-styles;
 @include foundation-top-bar;
 @include foundation-menu;
+@include foundation-visibility-classes;
 
 @mixin full-height {
   height: calc(100vh - #{ $nav-height });
@@ -45,7 +48,10 @@ body {
 .intro {
   font-family: Lato;
   font-weight: 300;
-  font-size: 62px;
+  font-size: 42px;
+  @include breakpoint(large) {
+    font-size: 62px;
+  }
   strong {
     font-weight: 700;
   }
@@ -53,11 +59,13 @@ body {
   flex-direction: row;
   align-items: center;
   z-index: 10;
-  @include full-height;
+  @include min-full-height;
 }
 
 h1 {
-  font-size: 71px;
+  @include breakpoint(large) {
+    font-size: 71px;
+  }
   font-weight: 700;
   line-height: 1;
   margin: 0;
@@ -101,22 +109,25 @@ h1 {
   text-transform: uppercase;
   color: $gray;
   margin-bottom: 15px;
-  &-paragraphs {
-    margin-top: 65px;
-    display: flex;
+  @include breakpoint(large) {
+    &-paragraphs {
+      margin-top: 65px;
+      display: flex;
 
-    & p:last-child {
-      padding-left: 20px;
-    }
-    & p:first-child {
-      border-right: solid 1px $light-gray;
-      padding-right: 20px;
+      & p:last-child {
+        padding-left: 20px;
+      }
+      & p:first-child {
+        border-right: solid 1px $light-gray;
+        padding-right: 20px;
+      }
     }
   }
   &-headers {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    z-index: 10;
   }
   &-line {
     border-bottom: solid 2px $gray;
@@ -131,7 +142,7 @@ h1 {
 .page {
   padding-top: 80px;
   position: relative;
-  @include full-height;
+  @include min-full-height;
 }
 
 .begin-section {
@@ -175,14 +186,20 @@ h1 {
     background: $background-color;
   }
   &-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include breakpoint(large) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     margin-top: 15px;
   }
   &-container {
-    width: $contact-width-large;
-    height: 29vw;
+    width: $contact-width-small;
+    height: 101vw;
+    @include breakpoint(large) {
+      width: $contact-width-large;
+      height: 29vw;
+    }
     position: relative;
     perspective: 800px;
   }
@@ -205,21 +222,29 @@ h1 {
 }
 
 .in-touch {
-  width: $contact-width-large;
+  width: $contact-width-small;
+  @include breakpoint(large) {
+    width: $contact-width-large;
+    border-right: solid 1px $light-gray;
+  }
   box-sizing: content-box;
-  border-right: solid 1px $light-gray;
   padding-left: $contact-gutter;
   padding-right: $contact-gutter;
   &:last-child {
     border-right: none;
     padding-right: 0;
   }
-  &:first-child {
-    padding-left: 0;
+  @include breakpoint(large) {
+    &:first-child {
+      padding-left: 0;
+    }
   }
+
   &-row {
-    display: flex;
-    justify-content: space-between;
+    @include breakpoint(large) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &-input,
   &-button {
