@@ -279,7 +279,7 @@ h1 {
 
 .home_social {
   position: absolute;
-  bottom: 0;
+  bottom: 1vh;
   @include breakpoint(medium) {
     bottom: 7vh;
   }
