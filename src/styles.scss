@@ -255,6 +255,12 @@ h1 {
     border: none;
     border-bottom: 3px solid $gray;
     padding: 10px;
+    transition: box-shadow 0.3s, border 0.3s;
+    background-color: $background-color;
+    &:focus {
+      border: solid 1px #707070;
+      box-shadow: 0 0 5px 1px #969696;
+    }
   }
   &-button {
     border: solid 3px $gray;
