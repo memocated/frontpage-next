@@ -7,11 +7,13 @@ $gray: #c4c4c4;
 $light-gray: #f0f0f0;
 
 $contact-width-large: 22vw; // ~33% of content area
-$contact-height-large: 29vw;
+$contact-height-large: 36vw;
+$contact-width-medium: 25vw;
+$contact-height-medium: 43vw;
 $contact-gutter: 3.74vw; // ~ (17 columns / 21 columns ) - (0.22 * 3 contacts) / (2 paddings * 2 sides)
 
 $contact-width-small: 88vw;
-$contact-height-small: 101vw;
+$contact-height-small: 152vw;
 
 $grid-columns: 21;
 $topbar-padding: 0;
@@ -64,6 +66,12 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  @include breakpoint(small down) {
+    align-items: flex-start;
+    & br {
+      display: none;
+    }
+  }
   z-index: 10;
   @include min-full-height;
 }
@@ -203,6 +211,10 @@ h1 {
     width: $contact-width-small;
     height: $contact-height-small;
     @include breakpoint(medium) {
+      width: $contact-width-medium;
+      height: $contact-height-medium;
+    }
+    @include breakpoint(large) {
       width: $contact-width-large;
       height: $contact-height-large;
     }

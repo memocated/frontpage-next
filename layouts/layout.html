@@ -16,10 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
   </head>
 
-  <body id="page-top" class="index">
+  <body id="{{page-top-anchor}}" class="index">
     <nav class="top-bar">
       <div class="top-bar-left">
-        <a class="large-offset-1" href="#page-top">
+        <a class="large-offset-1" href="#{{page-top-anchor}}">
           <img class="logo" src="{{rootPath}}graphics/logo-memocate.svg" />
         </a>
         <span class="mobile-toggle show-for-small-only">
@@ -94,21 +94,18 @@
         <ul class="vertical medium-horizontal menu">
           <li><a href="#{{our-story-anchor}}" class="top-bar-link">{{our-story}}</a></li>
           <li><a href="#{{team-anchor}}" class="top-bar-link">{{team-heading}}</a></li>
-          <li><a href="#{{get-in-touch-anchor}}" class="top-bar-link">{{get-in-touch-heading}}</a></li>
-          <li><a href="#page-top" class="top-bar-link top-bar-button">Get Started</a></li>
+          <li><a href="#{{get-in-touch-anchor}}" class="top-bar-link top-bar-button">{{get-in-touch-heading}}</a></li>
+          <!-- <li><a href="#{{page-top-anchor}}" class="top-bar-link top-bar-button">Get Started</a></li> -->
         </ul>
       </div>
     </nav>
 
     <div class="page-content">
       <div class="grid-container fluid ">
-        <div id="page-top" class="grid-x">
+        <div id="{{page-top-anchor}}" class="grid-x">
           <div class="medium-offset-1 large-offset-3 large-10 intro">
             <div>
-              Hi!<br/>
-              We are <strong>Memocate,</strong><br/>
-              and we are creating the<br/>
-              <strong>aid for dementia.</strong>
+              {{{intro}}}
             </div>
           </div>
         </div>
@@ -133,7 +130,7 @@
             <div class="grid-x">
               <div class="medium-11 our-story-headers">
                 <span class="our-story-line"></span>
-                <span class="our-story">Our story</span>
+                <span class="our-story">{{our-story}}</span>
                 <h1>{{{this.h1}}}</h1>
               </div>
               <div class="medium-9">
@@ -183,10 +180,12 @@
                         <img class="contacts-card-icon" src="{{@root.rootPath}}graphics/homepage_icon_email.svg"/>
                         <span> {{this.email}}</span>
                       </p>
+                      {{#if this.phone}}
                       <p class="contacts-card-icon-line">
                         <img class="contacts-card-icon" src="{{@root.rootPath}}graphics/homepage_icon_phone.svg"/>
                         <span> {{this.phone}}</span>
                       </p>
+                      {{/if}}
                     </div>
                   </figure>
                 </div>
@@ -227,11 +226,11 @@
               </div>
               <div class="in-touch">
                 <h3>Email</h3>
-                <p>hello@memocate.com</p>
+                <p>heikki@memocate.com</p>
               </div>
               <div class="in-touch">
                 <h3>Phone</h3>
-                <p>040 555 66 77</p>
+                <p>+358 440 998 996</p>
               </div>
             </div>
           </div>
