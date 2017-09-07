@@ -92,9 +92,9 @@
       </div>
       <div id="main-menu" class="top-bar-right show-for-medium">
         <ul class="vertical medium-horizontal menu">
-          <li><a href="#our-story" class="top-bar-link">Our Story</a></li>
-          <li><a href="#team" class="top-bar-link">Team</a></li>
-          <li><a href="#get-in-touch" class="top-bar-link">Get in Touch</a></li>
+          <li><a href="#{{our-story-anchor}}" class="top-bar-link">{{our-story}}</a></li>
+          <li><a href="#{{team-anchor}}" class="top-bar-link">{{team-heading}}</a></li>
+          <li><a href="#{{get-in-touch-anchor}}" class="top-bar-link">{{get-in-touch-heading}}</a></li>
           <li><a href="#page-top" class="top-bar-link top-bar-button">Get Started</a></li>
         </ul>
       </div>
@@ -122,7 +122,7 @@
         {{> bottom-social }}
       </div>
 
-      <div id="our-story"></div>
+      <div id="{{our-story-anchor}}"></div>
       {{#each stories}}
       <div
         id="our-story-{{plus @index 1}}"
@@ -157,7 +157,7 @@
       </div>
       {{/each}}
 
-      <div class="grid-container fluid begin-section" id="team">
+      <div class="grid-container fluid begin-section" id="{{team-anchor}}">
         <div class="grid-x">
           <div class="medium-offset-2 medium-17">
             <span class="our-story-line"></span>
@@ -205,7 +205,7 @@
         </div>
       </div>
 
-      <div class="grid-container fluid page" id="get-in-touch">
+      <div class="grid-container fluid page" id="{{get-in-touch-anchor}}">
         <div class="grid-x">
           <div class="medium-offset-2 medium-17">
             <span class="our-story-line"></span>
