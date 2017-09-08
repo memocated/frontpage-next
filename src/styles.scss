@@ -205,7 +205,6 @@ h1 {
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    margin-top: 15px;
   }
   &-container {
     width: $contact-width-small;
@@ -220,6 +219,7 @@ h1 {
     }
     position: relative;
     perspective: 800px;
+    margin-top: 15px;
   }
   & figure {
     margin: 0;
