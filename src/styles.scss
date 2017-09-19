@@ -444,7 +444,13 @@ nav {
       position: relative;
     }
     &-expanded {
-      max-height: 700px; // a number greater than actual height
+      max-height: 800px; // a number greater than actual height
+      @include breakpoint(medium down) {
+        max-height: 1000px;
+      }
+      @include breakpoint(small down) {
+        max-height: 1500px;
+      }
     }
     &-gradient {
       position: absolute;
