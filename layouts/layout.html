@@ -124,7 +124,7 @@
       <div id="{{our-story-anchor}}"></div>
       {{#each stories}}
       <div
-        id="our-story-{{plus @index 1}}"
+        id="{{@root.our-story-anchor}}-{{plus @index 1}}"
         class="grid-container fluid page"
       >
         <div class="grid-x">
@@ -132,7 +132,7 @@
             <div class="grid-x">
               <div class="medium-11 our-story-headers">
                 <span class="our-story-line"></span>
-                <span class="our-story">{{our-story}}</span>
+                <span class="our-story">{{@root.our-story}}</span>
                 <h1>{{{this.h1}}}</h1>
               </div>
               <div class="medium-9">
@@ -146,10 +146,10 @@
           </div>
           <div class="large-1 ball-nav-container show-for-medium">
             <div class="ball-container">
-              <a href="#our-story-1" class="ball {{#eq @index 0}}ball-active{{/eq}}"></a>
-              <a href="#our-story-2" class="ball {{#eq @index 1}}ball-active{{/eq}}"></a>
-              <a href="#our-story-3" class="ball {{#eq @index 2}}ball-active{{/eq}}"></a>
-              <a href="#our-story-4" class="ball {{#eq @index 3}}ball-active{{/eq}}"></a>
+              <a href="#{{@root.our-story-anchor}}-1" class="ball {{#eq @index 0}}ball-active{{/eq}}"></a>
+              <a href="#{{@root.our-story-anchor}}-2" class="ball {{#eq @index 1}}ball-active{{/eq}}"></a>
+              <a href="#{{@root.our-story-anchor}}-3" class="ball {{#eq @index 2}}ball-active{{/eq}}"></a>
+              <a href="#{{@root.our-story-anchor}}-4" class="ball {{#eq @index 3}}ball-active{{/eq}}"></a>
             </div>
           </div>
         </div>
