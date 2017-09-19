@@ -359,18 +359,22 @@ nav {
     font-size: 18px;
     position: relative;
     top: $shift-top-bar-links;
+    transition: color 1s ease-in-out;
     &:hover,
     &-active {
       color: #383838
     }
   }
   &-button {
+    transition: color 1s ease-in-out, background-color 1s ease-in-out;
     &.top-bar-link-active, &:hover {
-      color: darken($memocate-color, 15%)
+      background-color: $memocate-color;
+      color: $background-color;
     }
     top: calc(#{ $shift-top-bar-links } - 1px);
-    border: solid 1px;
+    border: solid 1px $memocate-color;
     color: $memocate-color;
+    background-color: $background-color;
     border-radius: 49px;
   }
   &-right {
