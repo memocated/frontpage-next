@@ -347,9 +347,13 @@ nav {
   z-index: 9001;
   &-link {
     text-decoration: none;
-    color: #646464;
+    color: #8f8f8f;
     text-transform: uppercase;
     font-size: 18px;
+    &:hover,
+    &-active {
+      color: #383838
+    }
   }
   &-button {
     color: $memocate-color;
