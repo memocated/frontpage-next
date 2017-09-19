@@ -126,17 +126,20 @@ h1 {
   color: $gray;
   margin-bottom: 15px;
   @include breakpoint(large) {
+    &-side {
+      width: 50%;
+      float: left;
+    }
+
+    &-side:last-child {
+      padding-left: 20px;
+    }
+    &-side:first-child {
+      border-right: solid 1px $light-gray;
+      padding-right: 20px;
+    }
     &-paragraphs {
       margin-top: 65px;
-      display: flex;
-
-      & p:last-child {
-        padding-left: 20px;
-      }
-      & p:first-child {
-        border-right: solid 1px $light-gray;
-        padding-right: 20px;
-      }
     }
   }
   &-headers {
@@ -424,5 +427,14 @@ nav {
     > img {
       margin-bottom: 30px;
     }
+  }
+}
+
+.research{
+  &-refs {
+    font-size: 0.9em;
+  }
+  &-img {
+    margin-top: 45px;
   }
 }

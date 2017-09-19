@@ -161,8 +161,8 @@
               </div>
             </div>
             <div class="our-story-paragraphs">
-              <p>{{this.p_1}}</p>
-              <p>{{this.p_2}}</p>
+              <p class="our-story-side">{{this.p_1}}</p>
+              <p class="our-story-side">{{this.p_2}}</p>
             </div>
           </div>
           <div class="large-1 ball-nav-container show-for-medium">
@@ -214,6 +214,22 @@
       </div>
 
       <div class="grid-container fluid begin-section anchor" id="{{research-anchor}}">
+        <div class="grid-x">
+          <div class="medium-offset-2 medium-17">
+            <span class="our-story-line"></span>
+            <span class="our-story">{{research-heading}}</span>
+            <div class="our-story-paragraphs">
+              <div class="our-story-side">{{{research.p_1}}}</div>
+              <div class="our-story-side">{{{research.p_2}}}</div>
+            </div>
+            <img src="{{rootPath}}graphics/homepage_research.jpg" class="research-img" />
+            <div class="our-story-paragraphs research-refs">
+              <div class="our-story-side">{{{research.refs_1}}}</div>
+              <div class="our-story-side">{{{research.refs_2}}}</div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       <div class="grid-container fluid begin-section anchor" id="{{team-anchor}}">
