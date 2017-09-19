@@ -104,7 +104,7 @@
 
     <div class="page-content">
       <div class="grid-container fluid ">
-        <div id="koti" class="grid-x">
+        <div id="koti" class="grid-x anchor">
           <div class="medium-offset-1 large-offset-3 large-10 intro">
             <div>
               Hei! <br/> Me olemme <strong>Memocate,</strong><br/> ja me tuemme sinua<br/> <strong>muistisairaan hoidossa.</strong>
@@ -130,10 +130,10 @@
         </div>
       </div>
 
-      <div id="tarinamme"></div>
+      <div class="anchor" id="tarinamme"></div>
       <div
         id="tarinamme-1"
-        class="grid-container fluid page"
+        class="grid-container fluid page anchor"
       >
         <div class="grid-x">
           <div class="medium-offset-2 medium-17 our-story-container">
@@ -164,7 +164,7 @@
       </div>
       <div
         id="tarinamme-2"
-        class="grid-container fluid page"
+        class="grid-container fluid page anchor"
       >
         <div class="grid-x">
           <div class="medium-offset-2 medium-17 our-story-container">
@@ -195,7 +195,7 @@
       </div>
       <div
         id="tarinamme-3"
-        class="grid-container fluid page"
+        class="grid-container fluid page anchor"
       >
         <div class="grid-x">
           <div class="medium-offset-2 medium-17 our-story-container">
@@ -226,7 +226,7 @@
       </div>
       <div
         id="tarinamme-4"
-        class="grid-container fluid page"
+        class="grid-container fluid page anchor"
       >
         <div class="grid-x">
           <div class="medium-offset-2 medium-17 our-story-container">
@@ -256,7 +256,7 @@
         </div>
       </div>
 
-      <div class="grid-container fluid begin-section" id="palvelu">
+      <div class="grid-container fluid begin-section anchor" id="palvelu">
         <div class="grid-x">
           <div class="medium-offset-2 medium-17">
             <span class="our-story-line"></span>
@@ -292,10 +292,10 @@
         </div>
       </div>
 
-      <div class="grid-container fluid begin-section" id="tutkimus">
+      <div class="grid-container fluid begin-section anchor" id="tutkimus">
       </div>
 
-      <div class="grid-container fluid begin-section" id="tiimi">
+      <div class="grid-container fluid begin-section anchor" id="tiimi">
         <div class="grid-x">
           <div class="medium-offset-2 medium-17">
             <span class="our-story-line"></span>
@@ -447,7 +447,7 @@
         </div>
       </div>
 
-      <div class="grid-container fluid page" id="ota-yhteytta">
+      <div class="grid-container fluid page anchor" id="ota-yhteytta">
         <div class="grid-x">
           <div class="medium-offset-2 medium-17">
             <span class="our-story-line"></span>
@@ -543,6 +543,45 @@
          return false
        })
      })
+
+
+     // update location hash and styles based on scroll
+     var elems,
+         topBarLinks,
+         windowHeight
+     var init = function () {
+       elems = document.getElementsByClassName('anchor')
+       topBarLinks = document.getElementsByClassName('top-bar-link')
+
+       windowHeight = window.innerHeight
+       _addEventHandlers()
+     }
+     var _addEventHandlers = function () {
+       window.addEventListener('scroll', _checkPosition)
+       window.addEventListener('resize', init)
+     }
+     var _checkPosition = function () {
+       for (var i = elems.length - 1; i >= 0 ; --i) {
+         var posFromTop = elems[i].getBoundingClientRect().top
+         if (posFromTop - windowHeight < -400) {
+           history.replaceState(
+             {},
+             '',
+             document.location.origin + document.location.pathname + '#' + elems[i].id)
+
+           ;[].forEach.call(topBarLinks, function(el) {
+             if (el.href.indexOf(elems[i].id.replace(/-\d*$/, '')) !== -1) {
+               el.classList.add('top-bar-link-active')
+             } else {
+               el.classList.remove('top-bar-link-active')
+             }
+           })
+
+           break;
+         }
+       }
+     }
+     init();
     </script>
 
     <!-- Piwik -->

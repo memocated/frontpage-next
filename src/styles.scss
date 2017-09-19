@@ -356,6 +356,9 @@ nav {
     }
   }
   &-button {
+    &.top-bar-link-active, &:hover {
+      color: darken($memocate-color, 15%)
+    }
     color: $memocate-color;
     border: solid 1px;
     border-radius: 49px;

@@ -104,7 +104,7 @@
 
     <div class="page-content">
       <div class="grid-container fluid ">
-        <div id="{{page-top-anchor}}" class="grid-x">
+        <div id="{{page-top-anchor}}" class="grid-x anchor">
           <div class="medium-offset-1 large-offset-3 large-10 intro">
             <div>
               {{{intro}}}
@@ -121,11 +121,11 @@
         {{> bottom-social }}
       </div>
 
-      <div id="{{our-story-anchor}}"></div>
+      <div class="anchor" id="{{our-story-anchor}}"></div>
       {{#each stories}}
       <div
         id="{{@root.our-story-anchor}}-{{plus @index 1}}"
-        class="grid-container fluid page"
+        class="grid-container fluid page anchor"
       >
         <div class="grid-x">
           <div class="medium-offset-2 medium-17 our-story-container">
@@ -156,7 +156,7 @@
       </div>
       {{/each}}
 
-      <div class="grid-container fluid begin-section" id="{{service-anchor}}">
+      <div class="grid-container fluid begin-section anchor" id="{{service-anchor}}">
         <div class="grid-x">
           <div class="medium-offset-2 medium-17">
             <span class="our-story-line"></span>
@@ -192,10 +192,10 @@
         </div>
       </div>
 
-      <div class="grid-container fluid begin-section" id="{{research-anchor}}">
+      <div class="grid-container fluid begin-section anchor" id="{{research-anchor}}">
       </div>
 
-      <div class="grid-container fluid begin-section" id="{{team-anchor}}">
+      <div class="grid-container fluid begin-section anchor" id="{{team-anchor}}">
         <div class="grid-x">
           <div class="medium-offset-2 medium-17">
             <span class="our-story-line"></span>
@@ -245,7 +245,7 @@
         </div>
       </div>
 
-      <div class="grid-container fluid page" id="{{get-in-touch-anchor}}">
+      <div class="grid-container fluid page anchor" id="{{get-in-touch-anchor}}">
         <div class="grid-x">
           <div class="medium-offset-2 medium-17">
             <span class="our-story-line"></span>
@@ -332,6 +332,45 @@
          return false
        })
      })
+
+
+     // update location hash and styles based on scroll
+     var elems,
+         topBarLinks,
+         windowHeight
+     var init = function () {
+       elems = document.getElementsByClassName('anchor')
+       topBarLinks = document.getElementsByClassName('top-bar-link')
+
+       windowHeight = window.innerHeight
+       _addEventHandlers()
+     }
+     var _addEventHandlers = function () {
+       window.addEventListener('scroll', _checkPosition)
+       window.addEventListener('resize', init)
+     }
+     var _checkPosition = function () {
+       for (var i = elems.length - 1; i >= 0 ; --i) {
+         var posFromTop = elems[i].getBoundingClientRect().top
+         if (posFromTop - windowHeight < -400) {
+           history.replaceState(
+             {},
+             '',
+             document.location.origin + document.location.pathname + '#' + elems[i].id)
+
+           ;[].forEach.call(topBarLinks, function(el) {
+             if (el.href.indexOf(elems[i].id.replace(/-\d*$/, '')) !== -1) {
+               el.classList.add('top-bar-link-active')
+             } else {
+               el.classList.remove('top-bar-link-active')
+             }
+           })
+
+           break;
+         }
+       }
+     }
+     init();
     </script>
 
     <!-- Piwik -->
