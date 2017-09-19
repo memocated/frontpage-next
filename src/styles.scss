@@ -1,5 +1,6 @@
 $background-color: #FCFCFC;
-$body-font-color: #383838;
+$dark-gray: #383838;
+$body-font-color: $dark-gray;
 $nav-height: 80px;
 $footer-height: 80px;
 $grid-container-padding: 0;
@@ -272,7 +273,7 @@ h1 {
   &-input {
     width: 100%;
     border: none;
-    border-bottom: 3px solid $gray;
+    border-bottom: 2px solid $dark-gray;
     padding: 10px;
     transition: box-shadow 0.3s, border 0.3s;
     background-color: $background-color;
@@ -282,7 +283,9 @@ h1 {
     }
   }
   &-button {
-    border: solid 3px $gray;
+    border: solid 2px $dark-gray;
+    text-transform: uppercase;
+    color: $dark-gray;
     border-radius: 49px;
     padding: 0.8em 2em;
     width: 100%;
