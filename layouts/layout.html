@@ -223,9 +223,13 @@
               <div class="our-story-side">{{{research.p_2}}}</div>
             </div>
             <img src="{{rootPath}}graphics/homepage_research.jpg" class="research-img" />
-            <div class="our-story-paragraphs research-refs">
-              <div class="our-story-side">{{{research.refs_1}}}</div>
-              <div class="our-story-side">{{{research.refs_2}}}</div>
+            <div class="research-refs-container">
+              <div class="our-story-paragraphs research-refs">
+                <div class="our-story-side">{{{research.refs_1}}}</div>
+                <div class="our-story-side">{{{research.refs_2}}}</div>
+                <span class="research-refs-gradient"></span>
+              </div>
+              <span class="research-refs-read-more"><a href="#" class="research-refs-read-more-button">Read More</a></span>
             </div>
 
           </div>
@@ -348,6 +352,16 @@
        el.addEventListener('click', function () {
          hideMainMenu()
        })
+     })
+
+     // show-more button
+     var showMoreButton = document.querySelector('.research-refs-read-more-button')
+     showMoreButton.addEventListener('click', function (ev) {
+       showMoreButton.classList.add('hidden')
+       document.querySelector('.research-refs-gradient').classList.add('hidden')
+       document.querySelector('.research-refs').classList.add('research-refs-expanded')
+       ev.preventDefault()
+       return false
      })
 
 

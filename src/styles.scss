@@ -40,6 +40,14 @@ $small-padding: 12px;
   }
 }
 
+@mixin button {
+  border: solid 2px $dark-gray;
+  text-transform: uppercase;
+  color: $dark-gray;
+  border-radius: 49px;
+  padding: 0.8em 2em;
+}
+
 .logo {
   width: 185px;
 }
@@ -131,10 +139,10 @@ h1 {
       float: left;
     }
 
-    &-side:last-child {
+    &-side:last-of-type {
       padding-left: 20px;
     }
-    &-side:first-child {
+    &-side:first-of-type {
       border-right: solid 1px $light-gray;
       padding-right: 20px;
     }
@@ -286,11 +294,7 @@ h1 {
     }
   }
   &-button {
-    border: solid 2px $dark-gray;
-    text-transform: uppercase;
-    color: $dark-gray;
-    border-radius: 49px;
-    padding: 0.8em 2em;
+    @include button;
     width: 100%;
     margin-top: 21px;
   }
@@ -433,8 +437,45 @@ nav {
 .research{
   &-refs {
     font-size: 0.9em;
+    max-height: 120px;
+    overflow-y: hidden;
+    transition: max-height 1s ease-in-out;
+    &-container {
+      position: relative;
+    }
+    &-expanded {
+      max-height: 700px; // a number greater than actual height
+    }
+    &-gradient {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      /* "transparent" only works here because == rgba(0,0,0,0) */
+      background-image: linear-gradient(to bottom, transparent, #{ $background-color });
+      padding-top: 120px;
+    }
+    &-read-more {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+
+      &-button {
+        @include button;
+        background-color: $background-color;
+        width: 280px;
+        display: inline-block;
+      }
+    }
   }
   &-img {
     margin-top: 45px;
   }
+}
+
+.hidden {
+  display: none;
 }
